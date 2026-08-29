@@ -215,12 +215,24 @@ img { max-width: 100%; display: block; }
 
 .hero-panel {
   position: relative;
-  background: linear-gradient(160deg, var(--accent-dark), var(--accent) 70%);
   clip-path: polygon(12% 0, 100% 0, 100% 100%, 0% 100%);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 60px 40px;
+  overflow: hidden;
+}
+.hero-panel-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-panel-tint {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, rgba(31,82,184,0.82), rgba(15,20,26,0.78) 75%);
 }
 .hero-panel-grid {
   position: absolute;
@@ -301,22 +313,16 @@ img { max-width: 100%; display: block; }
 .project-card { background: var(--bg); }
 .project-media {
   height: 190px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgba(255, 255, 255, 0.9);
   position: relative;
   overflow: hidden;
 }
-.project-media::before {
-  content: "";
-  position: absolute; inset: 0;
-  background-image: linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
-  background-size: 28px 28px;
+.project-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
-.project-media-a { background: linear-gradient(135deg, var(--accent-dark), var(--accent)); }
-.project-media-b { background: linear-gradient(135deg, #2b2f36, #464c56); }
-.project-media-c { background: linear-gradient(135deg, #101216, #2a2d33); }
+.project-card:hover .project-media img { transform: scale(1.06); }
 .project-body { padding: 24px 26px 28px; }
 .project-tag {
   display: inline-block;
