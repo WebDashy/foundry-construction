@@ -1,0 +1,44 @@
+title: Foundry Construction Group
+description: >-
+  Foundry Construction Group builds industrial facilities, warehouses, and
+  corporate buildouts across the Front Range industrial corridor —
+  design-build, bonded, and built to run hard from day one.
+url: "https://webdashy.github.io"
+baseurl: "/foundry-construction"
+lang: en_US
+
+author:
+  name: Foundry Construction Group
+
+business:
+  name: Foundry Construction Group
+  phone: "+1-720-555-0188"
+  phone_display: "(720) 555-0188"
+  email: projects@foundryconstructiongroup.example
+  street: 1140 Rail Yard Way
+  city: Aurora
+  region: CO
+  postal_code: "80011"
+  license: "CO-GC-000111"
+  founded: 2011
+  years_building: 14
+  hours: "Mon–Fri, 6am–5pm MT"
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+permalink: pretty
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - node_modules
